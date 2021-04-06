@@ -1,0 +1,31 @@
+
+.page-services-list {
+  .intro {
+    padding-top: 50px;
+
+    h1 {
+      color: $black;
+    }
+  }
+
+  .green {
+    background-color: lawngreen;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }  
+
+  .red {
+    background-color: red;
+  }  
+
+  .gray {
+    background-color: lightgray;
+  } 
+  
+  .sub {
+    padding-left: 20px;
+  }
+ 
+}

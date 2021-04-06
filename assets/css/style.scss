@@ -1,0 +1,130 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@charset "utf-8";
+
+
+// Bootstrap
+@import 'bootstrap/functions';
+@import 'bootstrap-variables';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+// Libraries
+@import 'libraries/hamburgers/hamburgers';
+
+// Components
+@import 'components/page';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sub-footer';
+@import 'components/logo';
+@import 'components/main-menu';
+@import 'components/main-menu-mobile';
+@import 'components/social';
+@import 'components/hamburger';
+@import 'components/buttons';
+@import 'components/title';
+@import 'components/content';
+@import 'components/intro';
+@import 'components/strip';
+@import 'components/whitebox';
+@import 'components/feature';
+@import 'components/referenz';
+@import 'components/partner';
+
+@import 'bootstrap/bootstrap.min.css';
+@import 'bootstrap/bootstrap-big.min.css';
+@import 'bootstrap/bootstrap-utilities.min.css';
+@import 'bootstrap/bootstrap-reboot.min.css';
+
+// Pages
+@import 'pages/home';
+@import 'pages/team/team-list';
+@import 'pages/team/team-summary';
+@import 'pages/team/page-team-list';
+@import 'pages/testimonials/testimonials-list';
+@import 'pages/testimonials/testimonials-summary';
+@import 'pages/testimonials/page-testimonials-list';
+@import 'pages/services/page-services-list';
+@import 'pages/services/page-services-single';
+@import 'pages/services/service-single';
+@import 'pages/services/service-summary';
+
+@import 'fork-awesome/css/fork-awesome.min.css';
+@import 'styles/inter.css';
+
+html { 
+  font-family: 'Inter', sans-serif;
+  -webkit-font-feature-settings: "salt" on, "frac" off, "liga" on, "calt" on, "tnum" on, "ss01" on, "ss03" on, "ss02" on;
+  -moz-font-feature-settings: "salt" on, "frac" off, "liga" on, "calt" on, "tnum" on, "ss01" on, "ss03" on, "ss02" on;   
+  -ms-font-feature-settings: "salt" on, "frac" off, "liga" on, "calt" on, "tnum" on, "ss01" on, "ss03" on, "ss02" on;
+  font-feature-settings: "salt" on, "frac" off, "liga" on, "calt" on, "tnum" on, "ss01" on, "ss03" on, "ss02" on;
+}
+
+.background-secondary {
+  background-color: $secondary;
+}
+
+.background-light {
+  background-color: #a2c536;
+}
+
+.kis {
+  color: $secondary !important;
+}
+
+.block {
+  text-align: justify;
+}
+
+.more_docs {
+  margin-top: 50px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.shadow {
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,.24) !important;
+}
+
+.support-headline {
+  font-weight: bold;
+}
+
+.support-text {
+  padding: 50px;
+  font-size: 16px;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+// Display breakpoints for DEV
+// body:after {
+//   color: #000000;
+//   font-size: 12px;
+//   padding: 5px;
+//   font-weight: bold;
+//   right: 10px;
+//   position: fixed;
+//   text-align: center;
+//   text-transform: uppercase;
+//   bottom: 10px;
+//   width: 200px;
+//   z-index: 9999;
+//   border: solid 1px #000000;
+//   @each $name, $value in $grid-breakpoints {
+//     @include media-breakpoint-up($name) {
+//       content: "#{$name} - min-width: #{$value}";
+//     }
+//   }
+// }

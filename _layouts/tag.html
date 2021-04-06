@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="strip strip-white strip-diagonal">
+    <div class="container pt-4 pt-md-10">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-8">
+                <div class="service service-single">
+                    {% include nav-breadcrumbs.html %}
+                    {% for post in site.text reversed %}
+                    {% if post.categories contains page.tag %}
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <span class="date">{{ post.date  | date: '%d. %B %Y'  }}</span>
+                    <div class="post_tags">
+                        {% if post.tags %}<br>Tags:
+                        {% for cat in post.categories %}
+                        <span class="tag"><a href="/text/{{ cat }}/">{{ cat }}</a></span>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="content" style="padding-bottom: 30px; padding-top: 20px">
+                        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+                        {% assign excerpt_word_count = post.excerpt | number_of_words %}
+                        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+                        {% endif %}
+                    </div>
+                    <hr>
+
+                    {% endif %}
+                    {% endfor %}
+                    <div class="content block">
+                        <!-- Pagination links -->
+                        <div class="pager">
+                            {% if paginator.previous_page %}
+                            <a href="{{ paginator.previous_page_path }}" class="previous">
+                                Previous
+                            </a>
+                            {% else %}
+                            <span class="previous">Previous</span>
+                            {% endif %}
+                            <span class="page_number ">
+                                Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                            </span>
+                            {% if paginator.next_page %}
+                            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+                            {% else %}
+                            <span class="next ">Next</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more_docs">
+                {% include news.html %}
+            </div>
+        </div>
+    </div>
+</div>

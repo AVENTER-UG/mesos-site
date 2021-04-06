@@ -1,0 +1,31 @@
+.header-transparent {
+  @include media-breakpoint-up(md) {
+    background-color: transparent;
+    color: #ffffff;
+  }
+  .logo {
+    @include media-breakpoint-up(lg) {
+      opacity: 0;
+    }
+  }
+  .main-menu {
+    ul {
+      li {
+        a {
+          &:hover {
+            background: transparent;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .hamburger {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      @include media-breakpoint-up(md) {
+        background: #ffffff;
+      }
+    }
+  }

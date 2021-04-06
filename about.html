@@ -1,0 +1,62 @@
+---
+title: About
+layout: default
+---
+
+
+<div class="strip strip-white strip-diagonal">
+
+  <div class="intro intro-small">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Über  {{ site.data.contact.businessName }} </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container block">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <p>
+          Das Geschäftsfeld von {{ site.data.contact.businessName }} umfasst IT Consulting. Genauer; Die Planung, Entwicklung
+          und Aufbau von Microservice Umgebungen. Sowie der Systemadministration und Software Entwicklung 
+          im Bereich der New Technology wie auch von Legacy und Industriesystemen.
+
+          Neben der Entwicklung von Service oder Software für den Kunden, arbeitet {{ site.data.contact.businessName }} auch an 
+          vielen OpenSource Projekten mit. Wie z.B.:
+          <ul>
+            <li>Apache Airflow</li>
+            <li>Apache Mesos</li>
+            <li>Kafka Mesos Framework</li>
+            <li>Synapse (Matrix)</li>
+            <li>Library Entwicklung für OS/2, Golang und Python</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro intro-small">
+    <div class="container" id="contact">
+      <div class="row">
+        <div class="col-12">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <ul>
+          {% include contact.html %}   
+        </ul>
+        <ul class="social" id="social" style="padding-left: 33px;">
+          {% include social.html %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

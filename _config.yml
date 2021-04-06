@@ -1,0 +1,63 @@
+baseurl: ''
+exclude: ['README.md']
+permalink: pretty
+title: 'AVENTER UG (haftungsbeschränkt)'
+description: AVENTER UG specializes in consulting, development and operation of fully automated microservices-oriented solutions. 
+keywords: aventer, aventer ug, Microservices, architecture, architekt, Golang, Software, Development, Entwicklung, Hosting, Docker, Mesos, Marathon, Linux, Dienstleistung, Services, Provider, Freelancer, Beratung, Consulting, Security, Token, Javascript, NodeJS, rest, Webservices, Docker, Mesos, Kubernetes, Linux, Perl, JavaScript, ANSI-C, Jenkins, Ansible, BASH, Shell, NGINX, OpenAIS, GlusterFS, AWS, Zookeeper, Prometheus, Bladelogic, Terraform, Python, DeepLearning, API Development, DC/OS, mesosphere
+authorName: Andreas Peters
+
+collections:
+  services:
+    output: true
+    permalink: /services/:path/    
+  text:
+    output: true
+    permalink: /text/:path/    
+  imprint:
+    output: true
+    permalink: /imprint/:path/
+  
+defaults:
+  - scope:
+      type: services
+    values:
+      layout: service
+      bodyClass: page-services-single
+  - scope:
+      path: 'images'
+    values:
+      image: true
+
+sass:
+  style: compact # possible values: nested expanded compact compressed
+
+google_analytics_id: null
+
+url: "https://www.aventer.biz"
+
+plugins:
+  - jekyll-environment-variables
+  - jekyll-paginate-v2
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+pagination:
+  enabled: true
+  per_page: 5
+  offset: 0
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+
+excerpt_length: 300    
+
+breadcrumbs:
+  root:
+    hide: false  # show breadcrumbs on root/home page
+    image: true # Show image or title text  
+

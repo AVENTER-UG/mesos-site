@@ -1,0 +1,58 @@
+---
+title: 
+layout: default
+bodyClass: page-home
+---
+
+<style>
+  .header {  
+    -webkit-transition: background-color 700ms ease-in-out;
+    -ms-transition: background-color 700ms ease-in-out;
+    transition: background-color 700ms ease-in-out;
+  
+    background-color: transparent !important;
+    box-shadow: 0 0 0 0 !important;
+    color: white;    
+  }  
+
+  .header .logo {
+    visibility: hidden;
+  }
+
+  .top-nav-short  {
+    -webkit-transition: background-color 700ms ease-in-out;
+    -ms-transition: background-color 700ms ease-in-out;
+    transition: background-color 700ms ease-in-out;
+  
+    background-color: white !important;  
+    color: black !important;  
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,.24) !important;
+  }     
+
+  .top-nav-short .logo {
+    visibility: visible;
+  }
+</style>
+
+<div class="intro">
+  <div class="container">
+    <img class="mainlogo" title="AVENTER UG (haftungsbeschränkt) your provider for microservice and legacy solutions" alt="AVENTER UG (haftungsbeschränkt) your provider for microservice and legacy solutions" src="/assets/images/logo_white.svg">
+  </div>
+</div>
+
+<div class="container pt-2" style="text-align:center; color: white">
+  <h1>Program against your datacenter like it’s a single pool of resources</h1>
+  Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively.
+</div>
+
+<div class="whitebox" style="margin-top: 200px; padding-top: 60px; padding-bottom: 60px;">
+
+  {% include services.html %}
+
+  <div style="height: 60px;"></div>
+  
+
+  <!-- {% include partner.html %} //-->
+
+</div>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title | escape }} {% if page.title %} - {{page.title}}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.authorName }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="robots" content="all">
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ site.title | escape }} " />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:url" content="https://www.aventer.biz/" />
+  <meta property="og:site_name" content="AVENTER" />
+  <meta property="og:image" content="https://www.aventer.biz/assets/images/aventer_schriftzug_mit_slogan_mit_haftung_white.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="sitemap" href="sitemap.xml" type="application/xml" />
+  <link rel="icon" href="{{site.baseurl}}/assets/images/favicon.ico">
+  <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/angular/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+</head>
+<body class='page {{page.bodyClass}}'>
+  {% include main-menu-mobile.html %}
+  <div id="wrapper" class="wrapper">
+    {% include header.html headerClass='header-extra' %}
+    {{content}}
+  </div>
+  {% include footer.html %}
+  {% include sub-footer.html %}
+
+
+</body>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles/an-old-hope.css">
+<noscript>
+  <style>
+    .header {
+      background-color: white !important;  
+      color: black !important;  
+      box-shadow: 2px 2px 5px 0px rgba(0,0,0,.24) !important;
+    }
+
+    .header .container .logo {
+      visibility: visible;
+    }
+  </style>
+</noscript>
+
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/libs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</html>

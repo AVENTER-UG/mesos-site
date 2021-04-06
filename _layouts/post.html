@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="strip strip-white strip-diagonal">
+    <div class="container pt-4 pt-md-10 pt-uhd-10 ">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-8">
+                <div class="service service-single">
+                    {% include nav-breadcrumbs.html %}
+                    <h1 class="title">{{page.title}}</h1>  
+                    <span class="date">{{ page.date  | date: '%d. %B %Y'  }}</span>
+                    <span class="author">{{ page.author }}</span>
+                    <div class="post_tags">
+                        Tags:
+                        {% for cat in page.categories %}
+                        <span class="tag"><a href="/text/{{ cat }}/">{{ cat }}</a></span>
+                        {% endfor %}
+                    </div> 
+                    {% if page.donation %}
+                    {% if page.donation.liberapay %}
+                    <span class="donation"><a href="https://liberapay.com/{{ page.donation.liberapay }}" target="_new"><img src="https://img.shields.io/liberapay/receives/AVENTER.svg?logo=liberapay"></a></span>
+                    {% endif %}
+                    {% endif %}
+                    {% if page.git %}
+                    <span class="git"><a href="{{ site.data.contact.git }}/{{ page.git }}" target="_new"><img src="https://img.shields.io/static/v1?label=Gitea&message={{ page.git }}&color=brightgreen"></a></span>
+                    {% endif %}
+                    <hr>
+                    <div class="content block">{{page.content}}</div>
+                </div>
+            </div>
+            <div class="more_docs">
+                <h5>Weiterführende Dokumente</h5>
+                <ul>
+                    {% for post in site.text reversed %}
+                    {% if post.categories contains page.categories[0] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
