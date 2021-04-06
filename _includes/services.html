@@ -12,7 +12,7 @@
           <div class="service service-summary">
             <div class="service-content">
               <h2 class="service-title">
-                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+                {{ service.title }}
               </h2>
               {{ service.content | markdownify | strip_html | truncate: 100 }}
             </div>
