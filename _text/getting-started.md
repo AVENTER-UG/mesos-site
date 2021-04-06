@@ -1,6 +1,5 @@
 ---
-title: Apache Mesos | Getting Started
-breadcrumb: Getting Started
+title: Getting Started
 author: "Andreas Peters"
 layout: "post"
 date: "2019-10-30"
@@ -12,12 +11,12 @@ categories:
 
 ## How to use Binary Packages
 
-Find out how to download <a href="/documentation/latest/binary-packages">binary packages</a> and run Mesos on supported platforms.
+Find out how to download [binary package]({% link _text/binary-package.md %}) and run Mesos on supported platforms.
 
 ## How To Build
 
 See the <a href="/documentation/latest/building">building documentation</a> to learn how to build Mesos from source on various platforms.
 
 ## Community
-Refer to the <a href="/community">community page</a> for our mailing lists, Slack, IRC, and JIRA issue tracker.
+Refer to the [community page]({% link _text/community.md %}) for our Matrix and Github issue tracker.
 
