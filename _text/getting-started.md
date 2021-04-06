@@ -2,7 +2,7 @@
 title: Getting Started
 author: "Andreas Peters"
 layout: "post"
-date: "2019-10-30"
+date: "2021-04-05"
 categories:
     - mesos
 ---
