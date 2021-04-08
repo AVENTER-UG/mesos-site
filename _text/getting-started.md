@@ -17,6 +17,4 @@ Find out how to download [binary package](https://aventer-ug.github.io/mesos-doc
 
 See the [building documentation](https://aventer-ug.github.io/mesos-docs/building.html) to learn how to build Mesos from source on various platforms.
 
-## Community
-Refer to the [community page]({% link _text/community.md %}) for our Matrix and Github issue tracker.
 
