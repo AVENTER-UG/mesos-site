@@ -17,4 +17,6 @@ Find out how to download [binary package](https://aventer-ug.github.io/mesos-doc
 
 See the [building documentation](https://aventer-ug.github.io/mesos-docs/building.html) to learn how to build Mesos from source on various platforms.
 
+## Community
 
+Refer to the [community page](http://mesos.apache.org/community) for our mailing lists, Slack, IRC, and JIRA issue tracker.
